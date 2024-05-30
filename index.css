@@ -1,0 +1,172 @@
+@font-face {
+  font-family: "Basier Square";
+  src: url("BasierSquare-Regular.woff") format("woff");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Basier Square";
+  src: url("BasierSquare-SemiBold.woff") format("woff");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Basier Square";
+  src: url("BasierSquare-Bold.woff") format("woff");
+  font-weight: 800;
+}
+
+* {
+  font-family: "Basier Square";
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+body, html {
+  background-color: black;
+}
+
+#navbar {
+  background-color: rgba(0,0,0,0.5);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  z-index: 800 !important;
+}
+
+#navbar-search,
+#search-form {
+  background-color: rgba(255,255,255,0.2);
+  cursor: text;
+}
+
+hr {
+  border: 0;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  opacity: 1;
+}
+
+.text-fade-2 {
+  color: rgba(255,255,255,0.4);
+}
+
+.text-fade-3 {
+  color: rgba(255,255,255,0.7);
+}
+
+.text-fade-1 {
+  color: rgba(255,255,255,0.3);
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+#header-tag {
+  color: #156EA9;
+  text-transform: uppercase;
+  background-color: #B2DFFE;
+  display: inline-block;
+  font-size: 0.75em;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.fw-bold {
+  font-weight: 600 !important;
+  letter-spacing: 0.2px;
+}
+
+.fw-bolder {
+  font-weight: 800 !important;
+}
+
+.btn-white {
+  background-color: white;
+  color: black;
+  border: 0;
+  transition: opacity 0.2s;
+}
+
+.btn-white:hover {
+  opacity: 0.9;
+}
+
+.btn-black {
+  background-color: black;
+  border: 1px solid rgba(255,255,255,0.3);
+  color: white;
+  transition: background-color 0.2s;
+}
+
+.btn-black:hover {
+  background-color: rgba(255,255,255,0.1);
+}
+
+.spinner-border {
+  z-index: 0 !important;
+  position: relative;
+}
+
+.pointer-pass {
+  pointer-events: none;
+}
+
+#offcanvas-search {
+  pointer-events: auto;
+  background-color: rgba(127,127,127,0.3);
+  backdrop-filter: blur(20px);
+}
+
+#search-input {
+  background-color: transparent;
+  color: white;
+  border: 0;
+  outline: none;
+}
+
+#search-input::placeholder {
+  color: rgba(255,255,255,0.5);
+}
+
+#page-home,
+#page-track {
+  transition: opacity 0.2s;
+}
+
+#page-track,
+#track-body {
+  display: none;
+}
+
+#track-image {
+  width: 270px;
+  height: 270px;
+  object-fit: cover;
+}
+
+.track-item {
+  cursor: pointer;
+  background-color: transparent;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 5px;
+  transition: background-color 0.2s;
+}
+
+.track-item:hover {
+  background-color: rgba(255,255,255,0.1);
+}
+
+.header-list-item {
+  width: 50px;
+}
+
+#main-spinner {
+  z-index: 999;
+  background-color: rgba(0,0,0,0.3);
+  backdrop-filter: blur(10px);
+  transition: opacity 0.2s;
+}
