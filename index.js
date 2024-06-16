@@ -61,25 +61,7 @@ async function getAudio(name, artist) {
   const f = await fetch(`https://pipedapi.ngn.tf/search?q=${encodeURIComponent(`${name} ${artist}`)}&filter=music_songs`);
   const res = await f.json();
   const id = res.items[0].url.substr(9, res.items[0].url.length);
-  function pair(a, b) {
-    return 0.5 * (a + b) * (a + b + 1) + b;
-  }
-  let joint = new Array(Math.ceil(id.length / 2)).fill(0).map((_, i) => {
-    let a = id.charCodeAt(i * 2);
-    let b = id.charCodeAt((i * 2) + 1) || 0;
-    return [pair(a, b), i];
-  });
-  let randomized = joint.sort(_ => Math.random() - 0.5);
-  let current = 0;
-  let keys = "";
-  while(current != randomized.length) {
-    randomized.forEach((k, i) => {
-      if(k[1] != current) return;
-      keys += i;
-    });
-    current++;
-  }
-  return `https://creytm.vercel.app/${keys}.${randomized.map(i => i[0]).join(".")}/${name.trim().replaceAll(" ", "-")}.mp3`;
+  return `https://creytm.vercel.app/${id}/${name.trim().replaceAll(" ", "-")}.mp3`;
 }
 
 function getHighestImage(images) {
