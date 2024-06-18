@@ -187,7 +187,7 @@ function openTrackURL(index) {
   const id = (track.explicit ? "1" : "0") + track.id;
   const image = new URL(track.image).pathname.replace("/image/", "");
   history.pushState(null, "", `/${image}/${id}/${encodeURIComponent(name)}/${encodeURIComponent(artist)}`);
-  openTrack(name, artist, "https://i.scdn.co/image/" + image, id);
+  openTrack(name, artist, image, id);
 }
 
 async function getTrack(id) {
@@ -235,7 +235,7 @@ async function openTrack(name, artist, image, id) {
     $("#track-title-text, #track-info-title-text").text(name);
     $("#track-title-explicit, #track-info-title-explicit").toggle(id.charAt(0) == "1");
     $("#track-artist, #track-info-artist").text(artist);
-    $("#track-image").attr("src", image);
+    $("#track-image").attr("src", "https://i.scdn.co/image/" + image);
     // audio
     const audio = cc_audio_cache[name + artist] || await getAudio(name, artist);
     $("#track-audio").attr("src", audio);
