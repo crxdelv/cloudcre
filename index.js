@@ -376,7 +376,7 @@ function purgeCache() {
 
 $(document).ready(async _ => {
   cc_trending = await getTrending();
-  const seg = location.pathname.slice(1).split("/");
+  const seg = location.pathname.slice(1).split("/").map(i => decodeURIComponent(seg));
   if(seg.length == 4) {
     await openTrack(seg[2], seg[3], seg[0], seg[1]);
   }
