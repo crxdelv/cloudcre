@@ -226,7 +226,7 @@ async function openTrack(name, artist, image, id, nospinner) {
   localStorage["cc_history"] = JSON.stringify(cc_history);
   try {
     $("#track-body, #track-player, #track-info-tracklist").hide();
-    if(nospinner) $("#track-spinner").show();
+    $("#track-spinner").toggle(!nospinner);
     $("#track-player-spinner").css("display", "flex");
     openTrackPage();
     $("#track-info-title-text, #track-info-track, #track-info-album, #track-info-copyright").text("...");
