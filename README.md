@@ -1,3 +1,5 @@
+<p align="center">Version 4.0 has arrived! <a href="https://github.com/creuserr/cloudcre#whats-new">What's new?</a></p>
+
 <p align="center"><a href="https://cloudcre.vercel.app"><img src="https://cloudcre.vercel.app/ico/thumbnail.png" alt="cloudcre" width="500"></a></p>
 <p align="center"><a href="https://cloudcre.vercel.app"><img src="https://img.shields.io/badge/status-running-blue?style=for-the-badge&logo=vercel&labelColor=black" alt="status: running"></a></p>
 
@@ -20,3 +22,11 @@ If you want to add some features, you can use some of my APIs like [CreQQ](https
 
 ### :balance_scale: Disclaimer
 cloudcre does not host any files and solely uses third-party services. If any copyright is infringed, cloudcre is not liable.
+
+### :four_leaf_clover: What's new?
+1. Added history
+2. Added lyrics provided by Genius
+3. Implemented custom player
+4. Added footer information
+5. Added permalink support
+6. Implemented full caching coverage
