@@ -220,13 +220,13 @@ async function getTrack(id) {
   }
 }
 
-async function openTrack(name, artist, image, id) {
+async function openTrack(name, artist, image, id, nospinner) {
   const entry = cc_history.find(i => i.selector == name + artist);
   if(!entry) cc_history.push({ name, artist, image, id, selector: name + artist });
   localStorage["cc_history"] = JSON.stringify(cc_history);
   try {
     $("#track-body, #track-player, #track-info-tracklist").hide();
-    $("#track-spinner").show();
+    if(!nospinner) $("#track-spinner").show();
     $("#track-player-spinner").css("display", "flex");
     openTrackPage();
     $("#track-info-title-text, #track-info-track, #track-info-album, #track-info-copyright").text("...");
