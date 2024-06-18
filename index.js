@@ -387,4 +387,5 @@ $(document).ready(async _ => {
   if(location.pathname == "/notfound") {
     showAlert("Song not found");
   }
+  $("#track-spinner").hide();
 });
