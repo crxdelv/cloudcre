@@ -30,3 +30,4 @@ cloudcre does not host any files and solely uses third-party services. If any co
 4. Added footer information
 5. Added permalink support
 6. Implemented full caching coverage
+7. Fixed minor issues regarding on audio streams
