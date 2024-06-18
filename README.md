@@ -20,9 +20,6 @@ Deploying your own is just simple. Fork this repository, add some adjustments, a
 
 If you want to add some features, you can use some of my APIs like [CreQQ](https://github.com/creuserr/creqq) for synchronized lyrics.
 
-### :balance_scale: Disclaimer
-cloudcre does not host any files and solely uses third-party services. If any copyright is infringed, cloudcre is not liable.
-
 ### :four_leaf_clover: What's new?
 1. Added history
 2. Added lyrics provided by Genius
@@ -31,3 +28,28 @@ cloudcre does not host any files and solely uses third-party services. If any co
 5. Added permalink support
 6. Implemented full caching coverage
 7. Fixed minor issues regarding audio streams
+
+#### Tiering system
+
+Tiering system uses the `popularity` score given by Spotify.
+
+> The popularity is calculated by algorithm and is based, in the most part, on the total number of plays the track has had and how recent those plays are.
+> 
+> The value will be between 0 and 100, with 100 being the most popular.
+>
+> *[&mdash; Spotify Web API](https://developer.spotify.com/documentation/web-api/reference/get-track)*
+
+The lookup table below is how it selects the tier by the given score.
+
+| Tier | Condition |
+|:----:|:---------:|
+| S+   | >= 95     |
+| A+   | >= 90     |
+| A    | >= 80     |
+| B    | >= 70     |
+| C    | >= 60     |
+| D    | >= 50     |
+| F    | 0         |
+
+### :balance_scale: Disclaimer
+cloudcre does not host any files and solely uses third-party services. If any copyright is infringed, cloudcre is not liable.
