@@ -27,16 +27,30 @@
   <div class="d-flex justify-content-center align-items-center w-100 h-100 position-fixed top-0 start-0" id="main-spinner">
     <div class="spinner-border text-white m-3" id="track-spinner"></div>
   </div>
+  <div class="justify-content-center align-items-center w-100 p-2 position-fixed bottom-0 start-0" id="main-alert">
+    <div id="alert" class="p-3 rounded d-flex justify-content-between align-items-center">
+      <p id="alert-text" class="m-0"></p>
+      <p onclick="hideAlert()" class="m-0"><i class="bi bi-x"></i></p>
+    </div>
+  </div>
   <main>
-  <div class="position-fixed w-100">
+  <div class="position-fixed w-100" id="navbar-outer">
     <div class="d-flex justify-content-center" id="navbar">
-      <div class="d-flex p-2 px-4 gap-3 container">
-      <a href="https://cloudcre.vercel.app" class="text-white text-decoration-none d-flex align-items-center gap-1 fs-5 pointer"><i class="bi bi-cloudy-fill text-white fs-4"></i><small class="fs-6">cre</small></a>
-      <div class="d-flex rounded-5 flex-grow-1 d-flex align-items-center p-2 px-3 gap-2" id="navbar-search" onclick="openSearch()">
-        <small class="pointer-pass"><i class="bi bi-search text-white"></i></small>
-        <p class="m-0 text-fade-2 pointer-pass">Search songs</p>
+      <div class="d-flex p-2 px-4 gap-3 container align-items-center">
+        <a href="https://cloudcre.vercel.app" class="text-white text-decoration-none d-flex align-items-center gap-1 fs-5 pointer"><i class="bi bi-cloudy-fill text-white fs-4"></i><small class="fs-6">cre</small></a>
+        <div class="d-flex rounded-5 flex-grow-1 d-flex align-items-center p-2 px-3 gap-2" id="navbar-search" onclick="openSearch()">
+          <small class="pointer-pass"><i class="bi bi-search text-white"></i></small>
+          <p class="m-0 text-fade-2 pointer-pass">Search songs</p>
+        </div>
+        <p class="m-0 text-white" onclick="toggleMenu()"><i class="bi bi-three-dots-vertical"></i></p>
       </div>
     </div>
+    <div id="navbar-menu-outer" class="justify-content-end p-2">
+      <div id="navbar-menu" class="p-2 rounded px-3">
+        <p class="m-0 text-white mb-2" onclick="clearHistory()">Clear History</p>
+        <p class="m-0 text-white" onclick="purgeCache()">Purge All Cache</p><br>
+        <p class="m-0 text-fade-3 text-end">cloudcre v4</p>
+      </div>
     </div>
   </div><br><br><br><br>
   <div class="d-flex justify-content-center"><div class="container">
@@ -47,7 +61,7 @@
     <p class="text-center text-fade-3 mx-4 m-0">Save time downloading music without hassle and complex steps. cloudcre provides almost every songs you need.</p><br>
     <div class="d-flex align-items-center gap-2">
       <button class="btn-white p-2 px-3 rounded-4" onclick="openSearch()">Start Downloading</button>
-      <a href="https://github.com/creuserr" class="btn-black p-2 px-3 rounded-4 text-decoration-none text-white pro-btn">Follow me</a>
+      <a href="https://github.com/creuserr/cloudcre" class="btn-black p-2 px-3 rounded-4 text-decoration-none text-white pro-btn">View on Github</a>
     </div><br><br>
     <p class="text-center mx-4 text-fade-1">Disclaimer: cloudcre does not host any files and solely uses third-party services. If any copyright is infringed, cloudcre is not liable.</p><br>
     <p class="text-center text-fade-2 m-0"><small>Powered by</small></p>
@@ -63,12 +77,37 @@
     </div>
     <div id="track-body">
       <div class="d-flex justify-content-center"><img src="" alt="" id="track-image" class="rounded"></div>
-      <p class="fs-5 fw-bold m-3 mb-0 text-white" id="track-title"></p>
+      <p class="fs-5 fw-bold m-3 mb-0 text-white" id="track-title"><span id="track-title-text"></span> <small id="track-title-explicit"><i class="bi bi-explicit-fill"></i></small></p>
       <p class="fs-5 m-3 mt-0 text-white" id="track-artist"></p>
-      <div class="d-flex justify-content-center p-3">
-        <audio src="#" controls="" id="track-audio" class="w-100"></audio>
+      <div class="justify-content-center" id="track-player-spinner">
+        <div class="spinner-border text-white"></div>
       </div>
-      <p class="text-center text-fade-1 m-3">To download this song, click the three-dots on the audio and click download.</p>
+      <div class="justify-content-center align-items-center p-3 w-100 gap-3" id="track-player">
+        <div id="player-slider-container">
+          <div id="player-slider"></div>
+        </div>
+        <a id="track-download" class="player-btn rounded-5 p-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16"><path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393"/></svg></a>
+      </div>
+      <audio src="#" id="track-audio"></audio>
+      <div class="d-flex p-3 justify-content-center w-100">
+        <p id="track-lyrics" class="m-0"></p>
+      </div>
+      <div class="d-flex justify-content-center">
+        <div class="w-100 rounded p-2 px-3 mx-3" id="track-info">
+          <p class="fw-bold text-white m-0" id="track-info-title"><span id="track-info-title-popularity" class="rounded-5 px-2 me-1"></span> <span id="track-info-title-text"></span> <small id="track-info-title-explicit"><i class="bi bi-explicit-fill"></i></small></p>
+          <p class="text-fade-3" id="track-info-artist"></p>
+          <div class="d-flex align-items-center gap-3">
+            <span class="text-fade-1"><i class="bi bi-music-note-beamed"></i></span>
+            <p class="m-0 text-fade-3" id="track-info-track">...</p>
+          </div>
+          <div class="d-flex align-items-center gap-3 mt-2">
+            <span class="text-fade-1"><i class="bi bi-record-circle-fill"></i></span>
+            <p class="m-0 text-fade-3"><span id="track-info-album">...</span> <span id="track-info-album-play" class="text-fade-2"></span></p>
+          </div>
+          <ol class="text-fade-2 mt-2" id="track-info-tracklist"></ol>
+          <p class="text-center text-fade-1 m-0 mt-2" id="track-info-copyright"></p>
+        </div>
+      </div><br>
     </div>
   </div>
   </div></div>

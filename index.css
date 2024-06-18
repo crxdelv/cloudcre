@@ -32,7 +32,17 @@ body, html {
   background-color: rgba(0,0,0,0.5);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255,255,255,0.2);
-  z-index: 800 !important;
+  z-index: 900 !important;
+  position: relative;
+}
+
+#navbar * {
+  position: relative;
+  z-index: 900 !important;
+}
+
+#navbar-outer {
+  z-index: 900 !important;
 }
 
 #navbar-search,
@@ -101,7 +111,7 @@ hr {
 }
 
 .btn-black:hover {
-  background-color: rgba(255,255,255,0.1);
+  background-color: rgba(255,255,255,0.2);
 }
 
 .spinner-border {
@@ -136,7 +146,10 @@ hr {
 }
 
 #page-track,
-#track-body {
+#track-body,
+#track-player,
+#navbar-menu-outer,
+#main-alert {
   display: none;
 }
 
@@ -169,4 +182,77 @@ hr {
   background-color: rgba(0,0,0,0.3);
   backdrop-filter: blur(10px);
   transition: opacity 0.2s;
+}
+
+#track-lyrics {
+  font-family: monospace;
+  font-size: 14px;
+  color: white;
+  user-select: auto !important;
+}
+
+#track-lyrics * {
+  font-family: inherit;
+  user-select: auto !important;
+}
+
+#track-audio {
+  position: relative !important;
+  z-index: 0 !important;
+}
+
+#player-slider-container {
+  width: 100%;
+  height: 5px;
+  position: relative;
+  z-index: 1 !important;
+  margin: 0;
+  padding: 0;
+  background-color: rgba(255,255,255,0.1);
+}
+
+#player-slider {
+  width: 0;
+  height: 100%;
+  background-color: white;
+  position: relative;
+  z-index: 1 !important;
+}
+
+.player-btn {
+  border: 1.5px solid white;
+  background-color: transparent;
+  outline: none;
+  color: white !important;
+  transition: background-color 0.2s;
+  text-decoration: none;
+}
+
+.player-btn:hover {
+  background-color: rgba(255,255,255,0.2);
+}
+
+#track-info {
+  border: 1.5px solid rgba(255,255,255,0.2);
+}
+
+#track-info-title-popularity {
+  font-size: 12px;
+  background-color: white;
+  color: black;
+  padding: 2px;
+}
+
+#navbar-menu {
+  background-color: rgba(255,255,255,0.2);
+  backdrop-filter: blur(10px);
+  opacity: 0;
+}
+
+#alert {
+  color: white;
+  background-color: rgba(255,255,255,0.2);
+  backdrop-filter: blur(10px);
+  width: 100%;
+  opacity: 0;
 }
