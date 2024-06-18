@@ -49,7 +49,7 @@ The lookup table below is how it selects the tier by the given score.
 | B    | >= 70     |
 | C    | >= 60     |
 | D    | >= 50     |
-| F    | 0         |
+| F    | >= 0      |
 
 ### :balance_scale: Disclaimer
 cloudcre does not host any files and solely uses third-party services. If any copyright is infringed, cloudcre is not liable.
