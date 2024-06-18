@@ -1,4 +1,4 @@
-<p align="center">Version 4.0 has arrived! <a href="https://github.com/creuserr/cloudcre#whats-new">What's new?</a></p>
+<p align="center">Version 4.0 has arrived! <a href="https://github.com/creuserr/cloudcre?tab=readme-ov-file#four_leaf_clover-whats-new">What's new?</a></p><br>
 
 <p align="center"><a href="https://cloudcre.vercel.app"><img src="https://cloudcre.vercel.app/ico/thumbnail.png" alt="cloudcre" width="500"></a></p>
 <p align="center"><a href="https://cloudcre.vercel.app"><img src="https://img.shields.io/badge/status-running-blue?style=for-the-badge&logo=vercel&labelColor=black" alt="status: running"></a></p>
