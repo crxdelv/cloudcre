@@ -51,5 +51,11 @@ The lookup table below is how it selects the tier by the given score.
 | D    | >= 50     |
 | F    | >= 0      |
 
+#### History
+
+Your latest top 10 history will appear on the search tab. It will only appear if your history list has more than 9 items.
+
+`Try these songs` will never appear again unless you cleared your history.
+
 ### :balance_scale: Disclaimer
 cloudcre does not host any files and solely uses third-party services. If any copyright is infringed, cloudcre is not liable.
