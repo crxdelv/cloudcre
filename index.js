@@ -49,7 +49,7 @@ async function getTrending() {
 
 async function getToken() {
   // 5 minutes expiration
-  if(Date.now() > cc_token_expire + 5e5) {
+  if(Date.now() > cc_token_expire + 3e5) {
     const f = await fetch("https://byebyecors.vercel.app/open.spotify.com/get_access_token?reason=transport&productType=web_player");
     const res = await f.json();
     cc_token = res.accessToken;
