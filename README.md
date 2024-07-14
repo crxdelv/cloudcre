@@ -1,7 +1,6 @@
 > [!CAUTION]
-> **To be reconstructed** <br>
-> This project will be redefined and reconstructed soon.
-> For the mean time, cloudcre is not working and currently not available for use.
+> **Not Available** <br>
+> This project is currently unavailable and under reconstruction.
 
 <p align="center">Version 4.0 has arrived! <a href="https://github.com/creuserr/cloudcre?tab=readme-ov-file#four_leaf_clover-whats-new">What's new?</a></p><br>
 
