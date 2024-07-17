@@ -21,7 +21,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="https://cloudcre.vercel.app/ico/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="https://cloudcre.vercel.app/ico/favicon-16x16.png">
   <link rel="manifest" href="https://cloudcre.vercel.app/site.webmanifest">
-  <link rel="stylesheet" href="https://cloudcre.vercel.app/index.css">
+  <link rel="stylesheet" href="index.css">
 </head>
 <body>
   <div class="d-flex justify-content-center align-items-center w-100 h-100 position-fixed top-0 start-0" id="main-spinner">
@@ -42,14 +42,6 @@
           <small class="pointer-pass"><i class="bi bi-search text-white"></i></small>
           <p class="m-0 text-fade-2 pointer-pass">Search songs</p>
         </div>
-        <p class="m-0 text-white" onclick="toggleMenu()"><i class="bi bi-three-dots-vertical"></i></p>
-      </div>
-    </div>
-    <div id="navbar-menu-outer" class="justify-content-end p-2">
-      <div id="navbar-menu" class="p-2 rounded px-3">
-        <p class="m-0 text-white mb-2" onclick="clearHistory()">Clear History</p>
-        <p class="m-0 text-white" onclick="purgeCache()">Purge All Cache</p><br>
-        <p class="m-0 text-fade-3 text-end">cloudcre v4</p>
       </div>
     </div>
   </div><br><br><br><br>
@@ -91,22 +83,6 @@
       <audio src="#" id="track-audio"></audio>
       <div class="d-flex p-3 justify-content-center w-100">
         <p id="track-lyrics" class="m-0"></p>
-      </div>
-      <div class="d-flex justify-content-center">
-        <div class="w-100 rounded p-2 px-3 mx-3" id="track-info">
-          <p class="fw-bold text-white m-0" id="track-info-title"><span id="track-info-title-popularity" class="rounded-5 px-2 me-1"></span> <span id="track-info-title-text"></span> <small id="track-info-title-explicit"><i class="bi bi-explicit-fill"></i></small></p>
-          <p class="text-fade-3" id="track-info-artist"></p>
-          <div class="d-flex align-items-center gap-3">
-            <span class="text-fade-1"><i class="bi bi-music-note-beamed"></i></span>
-            <p class="m-0 text-fade-3" id="track-info-track">...</p>
-          </div>
-          <div class="d-flex align-items-center gap-3 mt-2">
-            <span class="text-fade-1"><i class="bi bi-record-circle-fill"></i></span>
-            <p class="m-0 text-fade-3"><span id="track-info-album">...</span> <span id="track-info-album-play" class="text-fade-2"></span></p>
-          </div>
-          <ol class="text-fade-2 mt-2" id="track-info-tracklist"></ol>
-          <p class="text-center text-fade-1 m-0 mt-2" id="track-info-copyright"></p>
-        </div>
       </div><br>
     </div>
   </div>
@@ -133,6 +109,6 @@
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
-<script src="https://cloudcre.vercel.app/index.js"></script>
-<script src="https://crebin.vercel.app/static/crellect.js" defer=""></script>
+<script src="utils.js"></script>
+<script src="index.js"></script>
 </html>

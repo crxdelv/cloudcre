@@ -1,18 +1,18 @@
 @font-face {
   font-family: "Basier Square";
-  src: url("BasierSquare-Regular.woff") format("woff");
+  src: url("fonts/BasierSquare-Regular.woff") format("woff");
   font-weight: 400;
 }
 
 @font-face {
   font-family: "Basier Square";
-  src: url("BasierSquare-SemiBold.woff") format("woff");
+  src: url("fonts/BasierSquare-SemiBold.woff") format("woff");
   font-weight: 600;
 }
 
 @font-face {
   font-family: "Basier Square";
-  src: url("BasierSquare-Bold.woff") format("woff");
+  src: url("fonts/BasierSquare-Bold.woff") format("woff");
   font-weight: 800;
 }
 
@@ -230,29 +230,4 @@ hr {
 
 .player-btn:hover {
   background-color: rgba(255,255,255,0.2);
-}
-
-#track-info {
-  border: 1.5px solid rgba(255,255,255,0.2);
-}
-
-#track-info-title-popularity {
-  font-size: 12px;
-  background-color: white;
-  color: black;
-  padding: 2px;
-}
-
-#navbar-menu {
-  background-color: rgba(255,255,255,0.2);
-  backdrop-filter: blur(10px);
-  opacity: 0;
-}
-
-#alert {
-  color: white;
-  background-color: rgba(255,255,255,0.2);
-  backdrop-filter: blur(10px);
-  width: 100%;
-  opacity: 0;
 }
