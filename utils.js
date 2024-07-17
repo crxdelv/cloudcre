@@ -155,7 +155,7 @@ Utils.getStream = async (name, artist) => {
 }
 
 Utils.getLyrics = async (name, artist) => {
-  const req = await fetch(`https://lyrist.vercel.app/api/${encodeURIComponent(name.toLowerCase().replaceAll(/[\(\)]/g, ""))}/${encodeURIComponent(artist.toLowerCase())}`);
+  const req = await fetch(`https://creprox.vercel.app/lyrist.vercel.app/api/${encodeURIComponent(name.toLowerCase().replaceAll(/[\(\)]/g, ""))}/${encodeURIComponent(artist.toLowerCase())}`);
   const res = await req.json();
   if(res.lyrics == null) return [];
   let padded = false;
