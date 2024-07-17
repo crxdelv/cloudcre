@@ -1,18 +1,18 @@
 @font-face {
   font-family: "Basier Square";
-  src: url("fonts/BasierSquare-Regular.woff") format("woff");
+  src: url("BasierSquare-Regular.woff") format("woff");
   font-weight: 400;
 }
 
 @font-face {
   font-family: "Basier Square";
-  src: url("fonts/BasierSquare-SemiBold.woff") format("woff");
+  src: url("BasierSquare-SemiBold.woff") format("woff");
   font-weight: 600;
 }
 
 @font-face {
   font-family: "Basier Square";
-  src: url("fonts/BasierSquare-Bold.woff") format("woff");
+  src: url("BasierSquare-Bold.woff") format("woff");
   font-weight: 800;
 }
 
