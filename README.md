@@ -1,6 +1,3 @@
-> [!WARNING]
-> cloudcre will be a private-source soon, to prevent copyright infringements.
-
 <p align="center"><a href="https://cloudcre.vercel.app"><img src="https://cloudcre.vercel.app/ico/thumbnail.png" alt="cloudcre" width="500"></a></p>
 <p align="center"><a href="https://cloudcre.vercel.app"><img src="https://img.shields.io/badge/status-running-blue?style=for-the-badge&logo=vercel&labelColor=black" alt="status: running"></a></p>
 
