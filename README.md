@@ -1,3 +1,10 @@
+> [!CAUTION]
+> **Unavailable** <br>
+> Due to pytubefix internal issue,
+> cloudcre and cloudcre-audio are currently
+> unavailable.
+> Further patching will be performed soon.
+
 <p align="center"><a href="https://cloudcre.vercel.app"><img src="https://cloudcre.vercel.app/ico/thumbnail.png" alt="cloudcre" width="500"></a></p>
 <p align="center"><a href="https://cloudcre.vercel.app"><img src="https://img.shields.io/badge/status-running-blue?style=for-the-badge&logo=vercel&labelColor=black" alt="status: running"></a></p>
 
