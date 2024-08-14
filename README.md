@@ -1,6 +1,6 @@
 > [!CAUTION]
 > **Unavailable** <br>
-> Due to pytubefix internal issue,
+> Due to some internal issues of pytubefix,
 > cloudcre and cloudcre-audio are currently
 > unavailable.
 > Further patching will be performed soon.
