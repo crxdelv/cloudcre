@@ -3,10 +3,6 @@
 > Due to some internal issues of pytubefix,
 > cloudcre and cloudcre-audio are currently
 > unavailable.
-> Further patching will be performed soon. <br>
-
-**Update in August 2024** <br>
-A self-implemented Innertube API will be used instead.
 
 <p align="center"><a href="https://cloudcre.vercel.app"><img src="https://cloudcre.vercel.app/ico/thumbnail.png" alt="cloudcre" width="500"></a></p>
 <p align="center"><a href="https://cloudcre.vercel.app"><img src="https://img.shields.io/badge/status-not_working-red?style=for-the-badge&logo=vercel&labelColor=black" alt="status: not working"></a></p>
